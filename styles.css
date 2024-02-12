@@ -102,7 +102,7 @@ span::before{
     }
     100% {
       top: 110%;
-      left: 0%;
+      left: 50%;
       transform: scale(5); /* El tamaño final de las estrellas */
       opacity: 0; /* La opacidad final de las estrellas */
     }
