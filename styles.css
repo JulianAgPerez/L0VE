@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
 }
-.heart{
+.heart__vibrate{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,7 +39,7 @@
   box-shadow: -10px 10px 90px #f20044;
   animation: heart 0.9s linear infinite;
 }
-@keyframes heart {
+@keyframes heart__vibrate {
   0%{
     transform: rotate(-45deg) scale(1.07);
   }
@@ -51,7 +51,7 @@
   }
   
 }
-.heart::before{
+.heart__vibrate:before{
   content: '';
   position: absolute;
   height: 70px;
@@ -61,7 +61,7 @@
   border-radius: 50px;
   box-shadow: -10px -10px 90px #f20044;
 }
-.heart:after{
+.heart__vibrate:after{
   content: '';
   position: absolute;
   height: 70px;
