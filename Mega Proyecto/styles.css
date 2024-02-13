@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    background-color: rgb(26, 23, 23);
+    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    text-align: center;
+}
+
+.body__title{
+    color: white;
+}
+.body__img{
+    width: 30%;
+    border-radius: 30%;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  border: 3px solid rgba(236, 225, 225, 0.664);
+  border-radius: 5%;
+  box-shadow: 0 0 5px white;
+  transition: all 0.3s;
+  background-image: linear-gradient(
+    to right,
+    lightblue,
+    pink,
+    rgba(155, 85, 155, 0.877)
+  );
+  background-size: 200%;
+  transition: background-position 0.5s;
+}
+
+button:hover {
+  border-color: pink;
+  transition: all 0.6s;
+  box-shadow: 0 0 100px pink;
+  background-position: right;
+}
+
+  
+
+@keyframes wipe-in-down {
+    from {
+      clip-path: inset(0 0 100% 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+span{
+    position: absolute;
+    pointer-events: none;
+    filter: drop-shadow(0 0 15px black);
+    animation: fadeInOut 1s linear infinite;
+}
+@keyframes fadeInOut {
+    0%,100%{
+        opacity: 0;
+    }
+    20%,80%{
+        opacity: 1;
+    }
+}
+span::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(heart.png);
+    background-size: cover;
+    animation: moveShape 1s linear infinite;
+}
+@keyframes moveShape {
+    0%{
+        transform: translate(0) rotate(0deg);
+    }
+    100%{
+        transform: translate(300px) rotate(360deg);
+    }
+}
+  
+  [transition-style="in:wipe:down"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-down both;
+  }
+  
+  /* El estilo de los elementos que representan las estrellas que caen */
+  .star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgb(250, 250, 210);
+    opacity: 0.8;
+    animation: fall 5s linear infinite; /* Una animación que hace que las estrellas caigan */
+  }
+  
+  /* La animación que hace que las estrellas caigan */
+  @keyframes fall {
+    0% {
+      top: -10%;
+      left: 50%;
+      transform: scale(1); /* El tamaño inicial de las estrellas */
+    }
+    100% {
+      top: calc(20% + var(--random) * 100%);
+      left: calc(-10% + var(--random) * 100%);
+      transform: scale(10); /* El tamaño final de las estrellas */
+      opacity: 0; /* La opacidad final de las estrellas */
+    }
+  }
+  
