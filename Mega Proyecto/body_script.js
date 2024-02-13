@@ -2,7 +2,6 @@ const btnYes = document.getElementById("yes");
 const btnNo = document.getElementById("no");
 const wujuuu = () => {
     alert('Nos vemos dentro de poquito entonces, tiamu 😘 uwu');
-    alert('Mañana nos casamos');
     location.href = 'https://youtu.be/vOSYQCyQqOI?t=16'
 }
 const noAmur = () => {
