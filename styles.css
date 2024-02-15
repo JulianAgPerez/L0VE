@@ -37,7 +37,7 @@
   position: relative;
   transform: rotate(-45deg);
   box-shadow: -10px 10px 90px #f20044;
-  animation: heart 0.9s linear infinite;
+  animation: heart__vibrate 0.9s linear infinite;
 }
 @keyframes heart__vibrate {
   0%{
